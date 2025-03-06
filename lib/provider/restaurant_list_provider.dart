@@ -26,7 +26,8 @@ class RestaurantListProvider extends ChangeNotifier {
         notifyListeners();
       }
     } on Exception catch (e) {
-      _resultState = RestaurantListErrorState(e.toString());
+      _resultState = RestaurantListErrorState("Failed to load data");
+      debugPrint(e.toString());
       notifyListeners();
     }
   }

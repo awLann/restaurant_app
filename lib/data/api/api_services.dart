@@ -15,7 +15,7 @@ class ApiServices {
       throw Exception('Failed to load restaurant list');
     }
   }
-  
+
   Future<RestaurantDetailResponse> getRestaurantDetail(String id) async {
     final response = await http.get(Uri.parse("$_baseUrl/detail/$id"));
 

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:readmore/readmore.dart';
 import 'package:restaurant_app/data/model/restaurant_detail_response.dart';
 import 'package:restaurant_app/screen/detail/menu_card_widget.dart';
 
@@ -60,11 +61,19 @@ class BodyOfDetailScreenWidget extends StatelessWidget {
               ],
             ),
             const SizedBox.square(dimension: 16),
-            Text(
+            ReadMoreText(
               restaurant.description,
               textAlign: TextAlign.justify,
               style: Theme.of(context).textTheme.bodyLarge,
+              trimMode: TrimMode.Line,
+              trimLines: 4,
+              trimCollapsedText: 'Show more',
             ),
+            // Text(
+            //   restaurant.description,
+            //   textAlign: TextAlign.justify,
+            //   style: Theme.of(context).textTheme.bodyLarge,
+            // ),
             const SizedBox.square(dimension: 24),
             Align(
               alignment: Alignment.centerLeft,
@@ -81,9 +90,8 @@ class BodyOfDetailScreenWidget extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 children: restaurant.menus.foods.map((food) {
                   return MenuCard(
-                    image: 'assets/images/foods-illustration.png',
-                    name: food.name
-                  );
+                      image: 'assets/images/foods-illustration.png',
+                      name: food.name);
                 }).toList(),
               ),
             ),
@@ -103,9 +111,8 @@ class BodyOfDetailScreenWidget extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 children: restaurant.menus.drinks.map((drink) {
                   return MenuCard(
-                    image: 'assets/images/drinks-illustration.png',
-                    name: drink.name
-                  );
+                      image: 'assets/images/drinks-illustration.png',
+                      name: drink.name);
                 }).toList(),
               ),
             )

@@ -16,10 +16,7 @@ class RestaurantCard extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Card(
-        margin: const EdgeInsets.symmetric(
-          horizontal: 16,
-          vertical: 8
-        ),
+        margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
         child: Padding(
           padding: const EdgeInsets.symmetric(
             vertical: 8,
@@ -30,11 +27,10 @@ class RestaurantCard extends StatelessWidget {
             children: [
               ConstrainedBox(
                 constraints: const BoxConstraints(
-                  maxHeight: 100,
-                  minHeight: 100,
-                  maxWidth: 140,
-                  minWidth: 140
-                ),
+                    maxHeight: 100,
+                    minHeight: 100,
+                    maxWidth: 140,
+                    minWidth: 140),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(8),
                   child: Hero(
@@ -48,47 +44,46 @@ class RestaurantCard extends StatelessWidget {
               ),
               const SizedBox.square(dimension: 8),
               Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Text(
-                      restaurant.name,
-                      style: Theme.of(context).textTheme.titleMedium,
-                    ),
-                    const SizedBox.square(dimension: 6),
-                    Row(
-                      children: [
-                        const Icon(Icons.pin_drop),
-                        const SizedBox.square(dimension: 4),
-                        Expanded(
-                          child: Text(
-                            restaurant.city,
-                            style: Theme.of(context).textTheme.bodyMedium,
-                          ),
+                  child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text(
+                    restaurant.name,
+                    style: Theme.of(context).textTheme.titleMedium,
+                  ),
+                  const SizedBox.square(dimension: 6),
+                  Row(
+                    children: [
+                      const Icon(Icons.pin_drop),
+                      const SizedBox.square(dimension: 4),
+                      Expanded(
+                        child: Text(
+                          restaurant.city,
+                          style: Theme.of(context).textTheme.bodyMedium,
                         ),
-                      ],
-                    ),
-                    const SizedBox.square(dimension: 6),
-                    Row(
-                      children: [
-                        const Icon(
-                          Icons.star_rate,
-                          color: Colors.amber,
+                      ),
+                    ],
+                  ),
+                  const SizedBox.square(dimension: 6),
+                  Row(
+                    children: [
+                      const Icon(
+                        Icons.star_rate,
+                        color: Colors.amber,
+                      ),
+                      const SizedBox.square(dimension: 4),
+                      Expanded(
+                        child: Text(
+                          restaurant.rating.toString(),
+                          style: Theme.of(context).textTheme.bodyMedium,
                         ),
-                        const SizedBox.square(dimension: 4),
-                        Expanded(
-                          child: Text(
-                            restaurant.rating.toString(),
-                            style: Theme.of(context).textTheme.bodyMedium,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                )
-              ),
+                      ),
+                    ],
+                  ),
+                ],
+              )),
             ],
           ),
         ),

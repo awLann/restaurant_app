@@ -4,11 +4,10 @@ import 'package:restaurant_app/style/custom_text_styles.dart';
 class CustomTheme {
   static ThemeData get lightTheme {
     return ThemeData(
-      colorSchemeSeed: Colors.green,
-      brightness: Brightness.light,
-      textTheme: _textTheme,
-      useMaterial3: true
-    );
+        colorSchemeSeed: Colors.green,
+        brightness: Brightness.light,
+        textTheme: _textTheme,
+        useMaterial3: true);
   }
 
   static ThemeData get darkTheme {
@@ -16,8 +15,7 @@ class CustomTheme {
         colorSchemeSeed: Colors.green,
         brightness: Brightness.dark,
         textTheme: _textTheme,
-        useMaterial3: true
-    );
+        useMaterial3: true);
   }
 
   static TextTheme get _textTheme {
