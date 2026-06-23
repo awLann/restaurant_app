@@ -1,16 +1,52 @@
-# restaurant_app
+# Restaurant App
 
-A new Flutter project.
+Restaurant discovery mobile app with bookmark and daily reminder.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- Discover restaurant and it's detail.
+- Browse foods and drinks.
+- Bookmark favorite restaurant.
+- Notification for daily reminder.
+- Dark mode.
 
-A few resources to get you started if this is your first Flutter project:
+## Tech Stacks
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Flutter
+- Dart
+- Provider
+- REST API
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Project Structure
+
+```text
+lib/
+├── data/ 
+├── provider/
+├── screen/
+├── services/
+├── static/
+├── style/
+└── main.dart
+```
+
+## Get Started
+
+### 1. Clone Repository
+
+```bash
+git clone <repository-url>
+cd <project-name>
+```
+
+### 2. Install Dependency
+
+```bash
+flutter pub get
+```
+
+### 3. Run the Application
+
+```bash
+flutter run
+```
